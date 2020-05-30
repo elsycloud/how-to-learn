@@ -7,10 +7,12 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  width: 1500px;
+  margin: 0 auto;
 }
 
-.body {
-  margin: 0;
+a {
+    text-decoration: none;
 }
 
 .header {
@@ -20,6 +22,7 @@
   background-color: #f2f2f2;
   display: grid;
   margin: 0;
+  position: relative;
   
   /* выше установили ограничения для секции */
 }
@@ -33,7 +36,7 @@
   left: 64px;
 }
 
-.logo {
+.header__logo {
   position: absolute;
   top: 30px;
   left: 64px;
@@ -41,13 +44,18 @@
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
-  height: 568px;
   width: 568px;
+  height: 568px;
+  background-color: #2f80ed;
+  position: absolute;
+  top: 64px;
+  left: 932px;
 }
 
-.header-title {
+.header__title {
   width: 730px;
   height: 96px;
+  display: flex;
   font-size: 102px;
   font-weight: 600;
   margin-top: 200px;
@@ -73,27 +81,27 @@
   width: 765px;
   height: 608px;
   position: absolute;
-  left: 837px;
+  left: 735px;
   top: 148px;
 }
 
-.header__square-pic {
-  width: 568px;
-  height: 568px;
-  background-color: #2f80ed;
-  position: absolute;
-  top: 64px;
-  left: 1034px;
+.content {
+  display: grid;
 }
 
-.description {
-  width: 80%;
-  min-width: 784px;
-  margin: auto;
+.content__description {
+  margin: 100px 0;
+  position: relative;
 }
 
 .content__description_two-columns {
-  margin: 100px 0;
+  width: 80%;
+  min-width: 784px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-left: 137px;
+  margin-top: 32px;
 }
 
 .content__description_two-columns_brief {
@@ -102,6 +110,9 @@
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
+  position: relative;
+  top: -50px;
+  left: 11px;
 }
 
 .content__description_two-columns_main-text {
@@ -113,10 +124,15 @@
   font-size: 24px;
   font-weight: normal;
   margin-left: 240px;
+  margin-bottom: -30px;
 }
 
 .content__description_two-columns_span-accent {
   font-weight: 700; 
+}
+
+.digits {
+  position: relative;
 }
 
 .digits__section-title {
@@ -124,15 +140,18 @@
   font-size: 60px;
   font-weight: 700;
   width: 60%;
-  margin: 100px 0 20px 592px;
+  margin-block-start: 0;
+  margin-left: 585px;
+  margin-block-end: 0;
 }
 
 .digits__section-subtitle {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  width: 50%;
-  margin: 20px 0 60px 740px;
+  width: 60%;
+  margin: 20px 0 60px 738px;
+  overflow: hidden;
 }
 
 .digits__section-table {
@@ -165,7 +184,7 @@
   width: 867px;
   height: 637px;
   left: 0;
-  bottom: -1712px;
+  bottom: 0;
   z-index: 1;
 }
 
@@ -175,6 +194,7 @@
   max-height: 790px;
   margin: 100px 0 0 0;
   background-color: #f2f2f2;
+  position: relative;
 }
 
 .feinman-title_method {
@@ -183,9 +203,10 @@
   font-size: 120px;
   font-weight: 700;
   position: relative;
-  top: 100px;
-  left: 703px;
+  top: 67px;
+  left: 645px;
   z-index: 2;
+  margin-block-start: 0;
 }
 
 .feinman-title_feinman {
@@ -194,7 +215,8 @@
   font-size: 120px;
   font-weight: 700;
   position: relative;
-  left: 578px;
+  top: -39px;
+  left: 539px;
   z-index: 2;
 }
 
@@ -204,7 +226,10 @@
   font-weight: normal;
   padding-left: 700px;
   position: relative;
+  left: -71px;
+  top: -70px;
   z-index: 3;
+  margin-block-end: 0;
 }
 
 .feinman-link {
@@ -212,7 +237,8 @@
   font-size: 36px;
   font-weight: normal;
   position: absolute;
-  right: 4px;
+  right: 48px;
+  top: 404px;
   text-decoration: none;
   color: black;
 }
@@ -222,7 +248,7 @@
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  background-color: #000000;
+  background-color: #1f1f1f;
   padding: 90px 0;
   position: relative;
 }
@@ -288,8 +314,9 @@
 
 .footer {
   min-height: 350px;
-  background-color: #000000;
+  background-color: #1f1f1f;
   padding: 60px 0 40px 0;
+  text-align: initial;
 }
 
 .footer__columns {
@@ -347,12 +374,14 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: 1403px;
+  left: 1453px;
+  top: inherit;
 }
 
-.footer__social-icon {
+.footer__social-icon img {
   width: 16px;
   height: 16px;
+  margin-right: 10px;
 }
 
 .footer__column-heading-social {
