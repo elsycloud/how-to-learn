@@ -37,7 +37,7 @@
   background-color: #2f80ed;
   position: absolute;
   top: 64px;
-  left: 1029px;
+  left: 1031px;
 }
 
 .header__title {
@@ -69,7 +69,7 @@
   width: 765px;
   height: 608px;
   position: absolute;
-  left: 832px;
+  left: 834px;
   top: 148px;
 }
 
@@ -280,6 +280,7 @@
   min-height: 350px;
   background-color: #1f1f1f;
   padding: 60px 0 40px 0;
+  display: flex;
 }
 
 .footer__columns {
@@ -296,6 +297,7 @@
 .footer__column_content_copyright {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-basis: 711px;
 }
 
@@ -304,7 +306,6 @@
   font-size: 18px;
   font-weight: normal;
   color: white;
-  margin-top: 272px;
 }
 
 .footer__column_content_info {
