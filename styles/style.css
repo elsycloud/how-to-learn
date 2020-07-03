@@ -1,11 +1,17 @@
+@keyframes rotation {
+  from {
+   transform: rotate(0deg);
+  }
+
+  to {
+   transform: rotate(360deg);
+   }
+}
+
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
   overflow: hidden;
 }
@@ -20,7 +26,7 @@
 }
 
 .logo {
-  width: 183px;
+  width: 183px; 
   height: 32px;
 }
 
@@ -38,6 +44,7 @@
   position: absolute;
   top: 64px;
   right: 0;
+  animation: rotation 20s linear infinite;
 }
 
 .header__title {
@@ -63,6 +70,11 @@
 .header__link {
   color: #2f80ed;
   text-decoration: none;
+  transition: 1s linear;
+}
+
+.header__link:hover {
+  opacity: 0.6;
 }
 
 .header__main-illustration {
@@ -113,6 +125,70 @@
 
 .two-columns__span-accent {
   font-weight: 700;
+}
+
+.techniques {
+  margin-top: 100px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.cards__title {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cards__description {
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.cards__image {
+  margin: 60px 40px 43px 40px;
+  width: 160px;
+  border-radius: 160px;
+}
+
+.cards {
+  margin: 0 auto;
+  width: 920px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.video {
+  position: relative;
+  bottom: -102px;
+}
+
+.video__iframes {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.video__iframe {
+  padding-right: 20px;
+}
+
+.cards__item {
+  margin-right: 100px;
+  width: 206px;
+  text-align: center;
+}
+
+.oakley {
+  padding-top: 160px;
+  background-color: #f2f2f2;
+}
+
+.digits {
+  margin: 100px 0 100px 0;
 }
 
 .section-title {
@@ -176,7 +252,7 @@
 
 .feinman {
   min-height: 790px;
-  margin: 100px 0 0 0;
+  padding-top: 80px;
   background-color: #f2f2f2;
   position: relative;
 }
@@ -184,7 +260,6 @@
 .feinman__title {
   width: 648px;
   margin: 0 auto;
-  padding-top: 100px;
   line-height: 1.15;
   text-align: center;
   position: inherit;
@@ -215,6 +290,85 @@
   text-decoration: none;
   color: black;
   z-index: 4;
+  transition: 1s linear;
+}
+
+.feinman__link:hover {
+  opacity: 0.6;
+}
+
+.khan {
+  padding-top: 105px;
+  background-color: #f2f2f2;
+}
+
+.khan__container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.khan__author {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.khan__title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
+  margin-block-start: 0;
+}
+
+.khan__quote {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  width: 790px;
+  margin-top: 50px;
+}
+
+.khan__quote-author {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 36px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.khan__quote-author-subline {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.khan__book-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 68px;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+}
+
+.khan__buy-link {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+  margin-left: 48px;
+  transition: 1s linear;
+}
+
+.khan__buy-link:hover {
+  opacity: 0.6;
 }
 
 .kaufman {
@@ -267,6 +421,24 @@
   top: 0;
   z-index: 1;
   background-size: contain;
+  animation: rotation 20s linear infinite;
+}
+
+.resources {
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.resources__logo-zone {
+  margin-bottom: 217px;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
 }
 
 .footer {
@@ -324,6 +496,11 @@
   font-weight: normal;
   color: white;
   text-decoration: none;
+  transition: 1s linear;
+}
+
+.footer__column-link:hover {
+  opacity: 0.6;
 }
 
 .footer__column_content_social {
