@@ -4,5 +4,7 @@
   font-weight: normal;
   width: 790px;
   margin-top: 50px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
